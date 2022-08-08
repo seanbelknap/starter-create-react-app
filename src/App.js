@@ -1,13 +1,7 @@
 import "./App.css";
 import GroceryList from "./listAndTables";
+import WelcomeBack from "./WelcomeBack";
 
-function WelcomeBack({ name = "valued customer", adjective = "nice" }) {
-  return (
-    <p>
-      Welcome back, {adjective} {name}!
-    </p>
-  );
-}
 
 function EncouragingWords(props) {
   console.log(props)
