@@ -1,4 +1,5 @@
 import "./App.css";
+import GroceryList from "./listAndTables";
 
 function WelcomeBack({ name = "valued customer", adjective = "nice" }) {
   return (
@@ -24,6 +25,7 @@ function App() {
       <WelcomeBack name="Joe" adjective="funny" />
       <WelcomeBack name="Anna" adjective="clever" />
       <WelcomeBack />
+      <GroceryList/>
     </>
   );
 }
