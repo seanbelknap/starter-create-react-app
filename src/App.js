@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import GroceryList from "./listAndTables";
 import WelcomeBack from "./WelcomeBack";
+import Header from "./header";
+import Content from "./Content";
 
 import Quote from "./Quote";
 
@@ -25,7 +27,10 @@ function App() {
   const [subscribed, setSubscribed] = useState(false);
   const [alerts, setAlerts] = useState(false);
 
-  console.log("Subscribed Status:", subscribed);
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  const toggleLoggedIn = () => setLoggedIn(!loggedIn);
+  
   return (
     <>
       <WelcomeBack name="Joe" />
@@ -39,6 +44,11 @@ function App() {
         {alerts ? "Stop Email Alerts" : "Get Email Alerts"}
       </button>
       </section>
+      <div>
+      <Header loggedIn={loggedIn} handleLoggedInClick={toggleLoggedIn} />
+      <Content loggedIn={loggedIn} />
+    </div>
+      
     </>
   );
 }
